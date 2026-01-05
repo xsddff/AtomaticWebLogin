@@ -94,7 +94,7 @@ export default function HeroSection() {
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
 
       {/* Hero 内容 */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 text-center scale-95 md:scale-100">
+      <div className="relative z-10 mx-auto w-full max-w-5xl px-6 sm:px-8 lg:px-12 text-center scale-95 md:scale-100">
         {/* Badge */}
         <div
           className={`

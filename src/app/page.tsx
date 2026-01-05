@@ -79,8 +79,8 @@ export default function Home() {
       <HeroSection />
 
       {/* Features Section */}
-      <section className="px-6 sm:px-8 lg:px-12 pt-20 pb-28 bg-white bg-pattern-dots">
-        <div className="max-w-6xl mx-auto">
+      <section className="w-full px-6 sm:px-8 lg:px-12 pt-20 pb-28 bg-white bg-pattern-dots">
+        <div className="mx-auto w-full max-w-6xl">
           {/* Section Header */}
           <ScrollAnimation className="text-center mb-20">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-relaxed">
@@ -113,8 +113,8 @@ export default function Home() {
       </section>
 
       {/* How It Works Section */}
-      <section className="px-6 sm:px-8 lg:px-12 py-20 md:py-28 bg-gradient-to-br from-violet-50/50 via-purple-50/50 to-pink-50/50 bg-pattern-grid">
-        <div className="max-w-5xl mx-auto">
+      <section className="w-full px-6 sm:px-8 lg:px-12 py-20 md:py-28 bg-gradient-to-br from-violet-50/50 via-purple-50/50 to-pink-50/50 bg-pattern-grid">
+        <div className="mx-auto w-full max-w-5xl">
           {/* Section Header */}
           <ScrollAnimation className="text-center mb-20">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-relaxed">
@@ -177,8 +177,8 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="px-6 sm:px-8 lg:px-12 pt-20 pb-28 bg-gradient-to-br from-violet-50/30 via-purple-50/30 to-pink-50/30">
-        <div className="max-w-6xl mx-auto">
+      <section className="w-full px-6 sm:px-8 lg:px-12 pt-20 pb-28 bg-gradient-to-br from-violet-50/30 via-purple-50/30 to-pink-50/30">
+        <div className="mx-auto w-full max-w-6xl">
           {/* Section Header */}
           <ScrollAnimation className="text-center mb-20">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-relaxed">
@@ -246,13 +246,13 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="px-6 sm:px-8 lg:px-12 py-20 bg-white relative overflow-hidden">
+      <section className="w-full px-6 sm:px-8 lg:px-12 py-20 bg-white relative overflow-hidden">
         {/* 背景装饰 */}
         <div className="absolute inset-0 bg-gradient-to-br from-violet-50 via-purple-50 to-violet-50/50" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-violet-200/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-200/10 rounded-full blur-3xl" />
 
-        <div className="max-w-4xl mx-auto text-center relative z-10">
+        <div className="mx-auto w-full max-w-4xl text-center relative z-10">
           <ScrollAnimation>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-relaxed">
               Ready to <span className="text-gradient">think better</span>?
@@ -290,8 +290,8 @@ export default function Home() {
       <BlackHole />
 
       {/* Footer */}
-      <footer className="px-6 sm:px-8 lg:px-12 py-12 bg-gray-900 text-gray-400">
-        <div className="max-w-6xl mx-auto">
+      <footer className="w-full px-6 sm:px-8 lg:px-12 py-12 bg-gray-900 text-gray-400">
+        <div className="mx-auto w-full max-w-6xl">
           <div className="grid md:grid-cols-4 gap-10 mb-10">
             {/* Brand */}
             <div>
