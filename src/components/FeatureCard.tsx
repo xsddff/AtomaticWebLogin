@@ -32,13 +32,13 @@ export default function FeatureCard({ icon, title, description, delay = 0 }: Fea
   return (
     <div
       className={`
-        relative group p-8 rounded-2xl
+        relative group p-10 rounded-2xl
         bg-white border border-gray-100
         card-hover
         cursor-pointer
         overflow-hidden
         transition-all duration-300
-        ${isHovered ? 'shadow-xl shadow-glow-violet' : 'shadow-sm'}
+        ${isHovered ? 'shadow-xl shadow-glow-soft' : 'shadow-sm'}
       `}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -66,12 +66,12 @@ export default function FeatureCard({ icon, title, description, delay = 0 }: Fea
         {/* 图标 */}
         <div
           className={`
-            w-14 h-14 rounded-xl
+            w-16 h-16 rounded-2xl
             flex items-center justify-center
             gradient-violet
             text-white
-            mb-6
-            transition-all duration-300
+            mb-8
+            transition-all duration-400
             ${isHovered ? 'scale-110 rotate-3 shadow-glow-violet' : ''}
           `}
         >
@@ -81,7 +81,7 @@ export default function FeatureCard({ icon, title, description, delay = 0 }: Fea
         {/* 标题 */}
         <h3
           className={`
-            text-xl font-bold text-gray-900 mb-3
+            text-2xl font-bold text-gray-900 mb-4
             transition-all duration-300
             ${isHovered ? 'translate-x-2 text-gradient-purple' : ''}
           `}
@@ -92,7 +92,7 @@ export default function FeatureCard({ icon, title, description, delay = 0 }: Fea
         {/* 描述 */}
         <p
           className={`
-            text-gray-600 leading-relaxed
+            text-gray-600 text-lg leading-relaxed
             transition-all duration-300
             ${isHovered ? 'text-gray-700' : ''}
           `}
@@ -133,13 +133,13 @@ export function AdvancedFeatureCard({
   return (
     <div
       className={`
-        relative group p-8 rounded-2xl
+        relative group p-10 rounded-2xl
         bg-gradient-to-br from-white to-violet-50/30
         border border-gray-100
         card-hover
         cursor-pointer
         overflow-hidden
-        ${isHovered ? 'shadow-xl shadow-glow-purple' : 'shadow-sm'}
+        ${isHovered ? 'shadow-xl shadow-glow-soft' : 'shadow-sm'}
       `}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -150,7 +150,7 @@ export function AdvancedFeatureCard({
       {/* 背景装饰 */}
       <div
         className={`
-          absolute inset-0 bg-gradient-to-br from-violet-500/5 via-purple-500/5 to-pink-500/5
+          absolute inset-0 bg-gradient-to-br from-violet-500/3 via-purple-500/3 to-pink-500/3
           transition-opacity duration-300
           ${isHovered ? 'opacity-100' : 'opacity-0'}
         `}
@@ -159,7 +159,7 @@ export function AdvancedFeatureCard({
       {/* 光标跟随效果 */}
       <div
         className={`
-          absolute inset-0 bg-gradient-to-br from-violet-500/10 to-purple-500/10
+          absolute inset-0 bg-gradient-to-br from-violet-500/5 to-purple-500/5
           transition-opacity duration-300 pointer-events-none
           ${isHovered ? 'opacity-100' : 'opacity-0'}
         `}
@@ -174,7 +174,7 @@ export function AdvancedFeatureCard({
             flex items-center justify-center
             gradient-purple
             text-white
-            mb-6 shadow-lg
+            mb-8 shadow-lg
             transition-all duration-500
             ${isHovered ? 'scale-110 rotate-6 shadow-glow-purple' : ''}
           `}
@@ -185,7 +185,7 @@ export function AdvancedFeatureCard({
         {/* 标题 */}
         <h3
           className={`
-            text-2xl font-bold text-gray-900 mb-3
+            text-2xl font-bold text-gray-900 mb-4
             transition-all duration-300
             ${isHovered ? 'text-gradient-purple' : ''}
           `}
@@ -194,18 +194,18 @@ export function AdvancedFeatureCard({
         </h3>
 
         {/* 描述 */}
-        <p className="text-gray-600 leading-relaxed mb-6">
+        <p className="text-gray-600 text-lg leading-relaxed mb-8">
           {description}
         </p>
 
         {/* 标签 */}
         {tags.length > 0 && (
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2.5">
             {tags.map((tag, index) => (
               <span
                 key={tag}
                 className={`
-                  px-3 py-1 rounded-full text-sm font-medium
+                  px-3.5 py-1.5 rounded-full text-sm font-medium
                   bg-gradient-to-r from-violet-100 to-purple-100 text-violet-700
                   transition-all duration-300
                   ${isHovered ? 'scale-105' : ''}

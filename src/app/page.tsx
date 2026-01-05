@@ -78,15 +78,15 @@ export default function Home() {
       <HeroSection />
 
       {/* Features Section */}
-      <section className="py-24 bg-white bg-pattern-dots">
+      <section className="py-32 bg-white bg-pattern-dots">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section Header */}
-          <ScrollAnimation className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <ScrollAnimation className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Everything you need to
               <span className="text-gradient"> think better</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Powerful features designed to enhance your thinking and creativity
             </p>
           </ScrollAnimation>
@@ -112,14 +112,14 @@ export default function Home() {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-24 bg-gradient-to-br from-violet-50/50 via-purple-50/50 to-pink-50/50 bg-pattern-grid">
+      <section className="py-32 bg-gradient-to-br from-violet-50/50 via-purple-50/50 to-pink-50/50 bg-pattern-grid">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section Header */}
-          <ScrollAnimation className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <ScrollAnimation className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               How it works
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Get started in minutes, think better forever
             </p>
           </ScrollAnimation>
@@ -176,14 +176,14 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-24 bg-gradient-to-br from-violet-50/30 via-purple-50/30 to-pink-50/30">
+      <section className="py-32 bg-gradient-to-br from-violet-50/30 via-purple-50/30 to-pink-50/30">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section Header */}
-          <ScrollAnimation className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <ScrollAnimation className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Loved by thinkers
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 leading-relaxed">
               Join thousands of people who think better with Reflect
             </p>
           </ScrollAnimation>
@@ -215,24 +215,24 @@ export default function Home() {
                 delay={index * 100}
                 threshold={0.2}
               >
-                <div className={`p-8 rounded-2xl bg-white border border-gray-100 card-hover hover:shadow-xl hover:shadow-${testimonial.color}-500/20`}>
-                  <div className="mb-4">
+                <div className="p-10 rounded-2xl bg-white border border-gray-100 card-hover hover:shadow-xl hover:shadow-glow-soft">
+                  <div className="mb-6">
                     {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-yellow-400">★</span>
+                      <span key={i} className="text-yellow-400 text-xl">★</span>
                     ))}
                   </div>
-                  <p className="text-gray-700 leading-relaxed mb-6">
+                  <p className="text-gray-700 text-lg leading-relaxed mb-8">
                     "{testimonial.content}"
                   </p>
-                  <div className="flex items-center gap-3">
-                    <div className={`w-12 h-12 rounded-full gradient-${testimonial.color} flex items-center justify-center text-white font-bold text-lg`}>
+                  <div className="flex items-center gap-4">
+                    <div className={`w-14 h-14 rounded-full gradient-${testimonial.color} flex items-center justify-center text-white font-bold text-xl`}>
                       {testimonial.name.charAt(0)}
                     </div>
                     <div>
-                      <div className="font-semibold text-gray-900">
+                      <div className="font-semibold text-gray-900 text-lg">
                         {testimonial.name}
                       </div>
-                      <div className="text-sm text-gray-600">
+                      <div className="text-base text-gray-600">
                         {testimonial.role}
                       </div>
                     </div>
@@ -245,39 +245,39 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-br from-violet-600 via-purple-600 to-pink-600 relative overflow-hidden">
+      <section className="py-32 bg-gradient-to-br from-violet-600 via-purple-600 to-violet-700 relative overflow-hidden">
         {/* 背景装饰 */}
         <div className="absolute inset-0 bg-pattern-dots opacity-10" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl" />
 
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center relative z-10">
           <ScrollAnimation>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
               Ready to think better?
             </h2>
-            <p className="text-xl text-violet-100 mb-10">
+            <p className="text-xl text-violet-100 mb-12 leading-relaxed">
               Start your free trial today. No credit card required.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-5 justify-center">
               <button
                 className="
-                  px-8 py-4 rounded-full
+                  px-10 py-4 rounded-full
                   bg-white text-violet-600 font-semibold text-lg
                   hover:shadow-2xl hover:shadow-white/20
                   hover:scale-105
-                  transition-all duration-200
+                  transition-all duration-300
                 "
               >
                 Get Started Free
               </button>
               <button
                 className="
-                  px-8 py-4 rounded-full
+                  px-10 py-4 rounded-full
                   bg-white/20 backdrop-blur-md border border-white/30
                   text-white font-semibold text-lg
                   hover:bg-white/30 hover:scale-105
-                  transition-all duration-200
+                  transition-all duration-300
                 "
               >
                 Talk to Sales

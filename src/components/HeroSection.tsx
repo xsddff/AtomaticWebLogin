@@ -80,7 +80,7 @@ export default function HeroSection() {
       className={`
         relative overflow-hidden
         min-h-screen flex items-center justify-center
-        gradient-bg animate-gradient
+        bg-gradient-to-br from-violet-600 via-purple-600 to-violet-700
         ${!shouldShow ? 'opacity-0' : ''}
       `}
     >
@@ -89,14 +89,18 @@ export default function HeroSection() {
         <ParticleBackground />
       </div>
 
+      {/* 柔和的光晕装饰 */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+
       {/* Hero 内容 */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8 text-center">
         {/* Badge */}
         <div
           className={`
-            inline-flex items-center gap-2 px-4 py-2 rounded-full
-            bg-white/20 backdrop-blur-md border border-white/30
-            text-white text-sm font-medium mb-8
+            inline-flex items-center gap-2 px-5 py-2.5 rounded-full
+            bg-white/15 backdrop-blur-lg border border-white/20
+            text-white text-sm font-medium mb-12
             animate-slide-up
             ${shouldShow ? 'opacity-100' : 'opacity-0'}
           `}
@@ -111,8 +115,8 @@ export default function HeroSection() {
         {/* 主标题 */}
         <h1
           className={`
-            text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold
-            text-white mb-6 leading-tight
+            text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold
+            text-white mb-8 leading-[1.1]
             animate-slide-up
             ${shouldShow ? 'opacity-100' : 'opacity-0'}
           `}
@@ -120,8 +124,8 @@ export default function HeroSection() {
             transitionDelay: shouldShow ? SCROLL_STAGGER_DELAY.STEP_2 : '0ms',
           }}
         >
-          <span className="block">Think faster.</span>
-          <span className="block">Think deeper.</span>
+          <span className="block mb-2">Think faster.</span>
+          <span className="block mb-2">Think deeper.</span>
           <span className="block">Think together.</span>
         </h1>
 
@@ -129,7 +133,7 @@ export default function HeroSection() {
         <div
           className={`
             text-xl sm:text-2xl md:text-3xl
-            text-white/90 mb-8 min-h-[3.5rem]
+            text-white/90 mb-10 min-h-[4rem]
             animate-slide-up
             ${shouldShow ? 'opacity-100' : 'opacity-0'}
           `}
@@ -146,7 +150,7 @@ export default function HeroSection() {
         {/* 描述文字 */}
         <p
           className={`
-            text-lg text-white/70 max-w-2xl mx-auto mb-10
+            text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-14 leading-relaxed
             animate-slide-up
             ${shouldShow ? 'opacity-100' : 'opacity-0'}
           `}
@@ -162,7 +166,7 @@ export default function HeroSection() {
         {/* CTA 按钮 */}
         <div
           className={`
-            flex flex-col sm:flex-row gap-4 justify-center items-center
+            flex flex-col sm:flex-row gap-5 justify-center items-center
             animate-slide-up
             ${shouldShow ? 'opacity-100' : 'opacity-0'}
           `}
@@ -172,22 +176,22 @@ export default function HeroSection() {
         >
           <button
             className="
-              px-8 py-4 rounded-full
+              px-10 py-4 rounded-full
               bg-white text-gray-900 font-semibold text-lg
               hover:shadow-2xl hover:shadow-white/20 hover:shadow-glow-violet
               hover:scale-105
-              transition-all duration-200
+              transition-all duration-300
             "
           >
             Start for free
           </button>
           <button
             className="
-              px-8 py-4 rounded-full
+              px-10 py-4 rounded-full
               bg-white/10 backdrop-blur-md border border-white/30
               text-white font-semibold text-lg
               hover:bg-white/20 hover:scale-105
-              transition-all duration-200
+              transition-all duration-300
             "
           >
             Watch demo
@@ -197,7 +201,7 @@ export default function HeroSection() {
         {/* 产品截图/演示区域 */}
         <div
           className={`
-            mt-16 relative
+            mt-24 relative
             animate-scale
             ${shouldShow ? 'opacity-100' : 'opacity-0'}
           `}
@@ -207,7 +211,7 @@ export default function HeroSection() {
         >
           <div
             className="
-              relative max-w-4xl mx-auto
+              relative max-w-5xl mx-auto
               bg-white/10 backdrop-blur-xl
               rounded-2xl border border-white/20
               shadow-2xl shadow-glow-purple
@@ -226,28 +230,24 @@ export default function HeroSection() {
             </div>
 
             {/* 内容区域 */}
-            <div className="p-8 min-h-[400px]">
-              <div className="space-y-4">
+            <div className="p-10 min-h-[400px]">
+              <div className="space-y-5">
                 {/* 模拟笔记内容 */}
                 {Array.from({ length: 5 }).map((_, i) => (
                   <div
                     key={i}
-                    className={`
-                      h-4 bg-white/20 rounded-full
-                      animate-pulse-slow
-                    `}
+                    className="h-4 bg-white/20 rounded-full"
                     style={{
                       width: `${Math.random() * 40 + 60}%`,
-                      animationDelay: `${i * 200}ms`,
                     }}
                   />
                 ))}
               </div>
             </div>
 
-            {/* 浮动装饰元素 */}
-            <div className="absolute -top-8 -right-8 w-24 h-24 bg-gradient-to-br from-violet-400 to-pink-400 rounded-2xl opacity-60 animate-float" />
-            <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-gradient-to-br from-purple-400 to-indigo-400 rounded-xl opacity-60 animate-float" style={{ animationDelay: '1.5s' }} />
+            {/* 浮动装饰元素 - 更缓慢优雅 */}
+            <div className="absolute -top-8 -right-8 w-24 h-24 bg-gradient-to-br from-violet-400 to-pink-400 rounded-2xl opacity-50 animate-float" />
+            <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-gradient-to-br from-purple-400 to-indigo-400 rounded-xl opacity-50 animate-float" style={{ animationDelay: '2s' }} />
           </div>
         </div>
       </div>
