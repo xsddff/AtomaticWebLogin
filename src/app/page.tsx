@@ -79,15 +79,15 @@ export default function Home() {
       <HeroSection />
 
       {/* Features Section */}
-      <section className="px-6 sm:px-8 lg:px-12 pt-28 pb-32 bg-white bg-pattern-dots">
+      <section className="px-6 sm:px-8 lg:px-12 pt-20 pb-28 bg-white bg-pattern-dots">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <ScrollAnimation className="text-center mb-20">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-relaxed">
               Everything you need to
               <span className="text-gradient"> think better</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-loose">
               Powerful features designed to enhance your thinking and creativity
             </p>
           </ScrollAnimation>
@@ -113,14 +113,14 @@ export default function Home() {
       </section>
 
       {/* How It Works Section */}
-      <section className="px-6 sm:px-8 lg:px-12 py-24 md:py-32 bg-gradient-to-br from-violet-50/50 via-purple-50/50 to-pink-50/50 bg-pattern-grid">
+      <section className="px-6 sm:px-8 lg:px-12 py-20 md:py-28 bg-gradient-to-br from-violet-50/50 via-purple-50/50 to-pink-50/50 bg-pattern-grid">
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}
           <ScrollAnimation className="text-center mb-20">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-relaxed">
               How it works
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-loose">
               Get started in minutes, think better forever
             </p>
           </ScrollAnimation>
@@ -157,10 +157,10 @@ export default function Home() {
 
                   {/* Content */}
                   <div className="relative pt-10">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2.5 group-hover:text-gradient-purple transition-colors">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2.5 group-hover:text-gradient-purple transition-colors leading-relaxed">
                       {item.title}
                     </h3>
-                    <p className="text-gray-600 text-base leading-relaxed">
+                    <p className="text-gray-600 text-base leading-loose">
                       {item.description}
                     </p>
                   </div>
@@ -177,14 +177,14 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="px-6 sm:px-8 lg:px-12 pt-28 pb-32 bg-gradient-to-br from-violet-50/30 via-purple-50/30 to-pink-50/30">
+      <section className="px-6 sm:px-8 lg:px-12 pt-20 pb-28 bg-gradient-to-br from-violet-50/30 via-purple-50/30 to-pink-50/30">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <ScrollAnimation className="text-center mb-20">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-relaxed">
               Loved by thinkers
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-lg text-gray-600 leading-loose">
               Join thousands of people who think better with Reflect
             </p>
           </ScrollAnimation>
@@ -222,7 +222,7 @@ export default function Home() {
                       <span key={i} className="text-yellow-400 text-lg">★</span>
                     ))}
                   </div>
-                  <p className="text-gray-700 text-base leading-relaxed mb-8">
+                  <p className="text-gray-700 text-base leading-loose mb-8">
                     "{testimonial.content}"
                   </p>
                   <div className="flex items-center gap-3">
@@ -246,7 +246,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="px-6 sm:px-8 lg:px-12 py-24 bg-white relative overflow-hidden">
+      <section className="px-6 sm:px-8 lg:px-12 py-20 bg-white relative overflow-hidden">
         {/* 背景装饰 */}
         <div className="absolute inset-0 bg-gradient-to-br from-violet-50 via-purple-50 to-violet-50/50" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-violet-200/10 rounded-full blur-3xl" />
@@ -254,10 +254,10 @@ export default function Home() {
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <ScrollAnimation>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-relaxed">
               Ready to <span className="text-gradient">think better</span>?
             </h2>
-            <p className="text-lg text-gray-600 mb-10 leading-relaxed">
+            <p className="text-lg text-gray-600 mb-10 leading-loose">
               Start your free trial today. No credit card required.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">

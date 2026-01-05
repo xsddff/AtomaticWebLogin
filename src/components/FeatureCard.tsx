@@ -92,7 +92,7 @@ export default function FeatureCard({ icon, title, description, delay = 0 }: Fea
         {/* 描述 */}
         <p
           className={`
-            text-gray-600 text-base leading-relaxed
+            text-gray-600 text-base leading-loose
             transition-all duration-300
             ${isHovered ? 'text-gray-700' : ''}
           `}
@@ -194,7 +194,7 @@ export function AdvancedFeatureCard({
         </h3>
 
         {/* 描述 */}
-        <p className="text-gray-600 text-base leading-relaxed mb-8">
+        <p className="text-gray-600 text-base leading-loose mb-8">
           {description}
         </p>
 

@@ -79,7 +79,7 @@ export default function HeroSection() {
     <section
       className={`
         relative overflow-hidden
-        min-h-screen flex items-center justify-center
+        min-h-screen flex items-center justify-center pb-20
         bg-gradient-to-br from-violet-600 via-purple-600 to-violet-700
         ${!shouldShow ? 'opacity-0' : ''}
       `}
@@ -116,7 +116,7 @@ export default function HeroSection() {
         <h1
           className={`
             text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold
-            text-white mb-6 leading-[1.15]
+            text-white mb-6 leading-[1.3]
             animate-slide-up
             ${shouldShow ? 'opacity-100' : 'opacity-0'}
           `}
@@ -124,8 +124,8 @@ export default function HeroSection() {
             transitionDelay: shouldShow ? SCROLL_STAGGER_DELAY.STEP_2 : '0ms',
           }}
         >
-          <span className="block mb-1.5">Think faster.</span>
-          <span className="block mb-1.5">Think deeper.</span>
+          <span className="block mb-2">Think faster.</span>
+          <span className="block mb-2">Think deeper.</span>
           <span className="block">Think together.</span>
         </h1>
 
@@ -133,7 +133,7 @@ export default function HeroSection() {
         <div
           className={`
             text-lg sm:text-xl md:text-2xl
-            text-white/90 mb-8 min-h-[3.5rem]
+            text-white/90 mb-8 min-h-[3.5rem] leading-loose
             animate-slide-up
             ${shouldShow ? 'opacity-100' : 'opacity-0'}
           `}
@@ -150,7 +150,7 @@ export default function HeroSection() {
         {/* 描述文字 */}
         <p
           className={`
-            text-base md:text-lg text-white/80 max-w-3xl mx-auto mb-12 leading-relaxed
+            text-base md:text-lg text-white/80 max-w-3xl mx-auto mb-12 leading-loose tracking-wide
             animate-slide-up
             ${shouldShow ? 'opacity-100' : 'opacity-0'}
           `}
