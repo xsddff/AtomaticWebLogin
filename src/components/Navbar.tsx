@@ -51,7 +51,7 @@ export default function Navbar() {
   return (
     <>
       <nav className={"fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out " + (isHidden ? "-translate-y-full" : "translate-y-0") + " " + (isScrolled ? "bg-white/80 backdrop-blur-lg border-b border-gray-100 shadow-sm" : "bg-transparent")}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="flex items-center justify-between h-16">
             <Link href="/" className="flex items-center gap-2 group" onClick={() => setIsMobileMenuOpen(false)}>
               <div className="w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 gradient-violet group-hover:scale-110 shadow-lg">
