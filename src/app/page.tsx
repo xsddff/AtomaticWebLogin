@@ -78,8 +78,8 @@ export default function Home() {
       <HeroSection />
 
       {/* Features Section */}
-      <section className="pt-32 pb-40 bg-white bg-pattern-dots">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <section className="px-6 sm:px-8 lg:px-12 pt-32 pb-40 bg-white bg-pattern-dots">
+        <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <ScrollAnimation className="text-center mb-24">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
@@ -112,8 +112,8 @@ export default function Home() {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-32 md:py-40 bg-gradient-to-br from-violet-50/50 via-purple-50/50 to-pink-50/50 bg-pattern-grid">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <section className="px-6 sm:px-8 lg:px-12 py-32 md:py-40 bg-gradient-to-br from-violet-50/50 via-purple-50/50 to-pink-50/50 bg-pattern-grid">
+        <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <ScrollAnimation className="text-center mb-24">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
@@ -176,8 +176,8 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="pt-32 pb-40 bg-gradient-to-br from-violet-50/30 via-purple-50/30 to-pink-50/30">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <section className="px-6 sm:px-8 lg:px-12 pt-32 pb-40 bg-gradient-to-br from-violet-50/30 via-purple-50/30 to-pink-50/30">
+        <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <ScrollAnimation className="text-center mb-24">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
@@ -245,13 +245,13 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-white relative overflow-hidden">
+      <section className="px-6 sm:px-8 lg:px-12 py-32 bg-white relative overflow-hidden">
         {/* 背景装饰 */}
         <div className="absolute inset-0 bg-gradient-to-br from-violet-50 via-purple-50 to-violet-50/50" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-violet-200/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-200/10 rounded-full blur-3xl" />
 
-        <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 text-center relative z-10">
+        <div className="max-w-5xl mx-auto text-center relative z-10">
           <ScrollAnimation>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
               Ready to <span className="text-gradient">think better</span>?
@@ -286,8 +286,8 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-16 bg-gray-900 text-gray-400">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <footer className="px-6 sm:px-8 lg:px-12 py-16 bg-gray-900 text-gray-400">
+        <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             {/* Brand */}
             <div>
