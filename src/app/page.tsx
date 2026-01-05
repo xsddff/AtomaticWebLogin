@@ -13,7 +13,7 @@ export default function Home() {
   const features = [
     {
       icon: (
-        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       ),
@@ -79,21 +79,21 @@ export default function Home() {
       <HeroSection />
 
       {/* Features Section */}
-      <section className="px-6 sm:px-8 lg:px-12 pt-32 pb-40 bg-white bg-pattern-dots">
-        <div className="max-w-7xl mx-auto">
+      <section className="px-6 sm:px-8 lg:px-12 pt-28 pb-32 bg-white bg-pattern-dots">
+        <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <ScrollAnimation className="text-center mb-24">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
+          <ScrollAnimation className="text-center mb-20">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               Everything you need to
               <span className="text-gradient"> think better</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Powerful features designed to enhance your thinking and creativity
             </p>
           </ScrollAnimation>
 
           {/* Features Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {features.map((feature, index) => (
               <ScrollAnimation
                 key={feature.title}
@@ -113,14 +113,14 @@ export default function Home() {
       </section>
 
       {/* How It Works Section */}
-      <section className="px-6 sm:px-8 lg:px-12 py-32 md:py-40 bg-gradient-to-br from-violet-50/50 via-purple-50/50 to-pink-50/50 bg-pattern-grid">
-        <div className="max-w-7xl mx-auto">
+      <section className="px-6 sm:px-8 lg:px-12 py-24 md:py-32 bg-gradient-to-br from-violet-50/50 via-purple-50/50 to-pink-50/50 bg-pattern-grid">
+        <div className="max-w-5xl mx-auto">
           {/* Section Header */}
-          <ScrollAnimation className="text-center mb-24">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
+          <ScrollAnimation className="text-center mb-20">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               How it works
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Get started in minutes, think better forever
             </p>
           </ScrollAnimation>
@@ -151,23 +151,23 @@ export default function Home() {
               >
                 <div className="relative group">
                   {/* Step Number */}
-                  <div className="text-8xl font-bold text-gradient-purple absolute -top-12 -left-4 opacity-50 group-hover:opacity-70 transition-opacity">
+                  <div className="text-7xl font-bold text-gradient-purple absolute -top-10 -left-3 opacity-50 group-hover:opacity-70 transition-opacity">
                     {item.step}
                   </div>
 
                   {/* Content */}
-                  <div className="relative pt-12">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-gradient-purple transition-colors">
+                  <div className="relative pt-10">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2.5 group-hover:text-gradient-purple transition-colors">
                       {item.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-600 text-base leading-relaxed">
                       {item.description}
                     </p>
                   </div>
 
                   {/* Connector Line */}
                   {index < 2 && (
-                    <div className="hidden md:block absolute top-20 -right-6 w-12 h-0.5 bg-gradient-to-r from-violet-400 to-transparent group-hover:w-16 transition-all duration-300" />
+                    <div className="hidden md:block absolute top-16 -right-5 w-10 h-0.5 bg-gradient-to-r from-violet-400 to-transparent group-hover:w-14 transition-all duration-300" />
                   )}
                 </div>
               </ScrollAnimation>
@@ -177,20 +177,20 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="px-6 sm:px-8 lg:px-12 pt-32 pb-40 bg-gradient-to-br from-violet-50/30 via-purple-50/30 to-pink-50/30">
-        <div className="max-w-7xl mx-auto">
+      <section className="px-6 sm:px-8 lg:px-12 pt-28 pb-32 bg-gradient-to-br from-violet-50/30 via-purple-50/30 to-pink-50/30">
+        <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <ScrollAnimation className="text-center mb-24">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
+          <ScrollAnimation className="text-center mb-20">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               Loved by thinkers
             </h2>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-lg text-gray-600 leading-relaxed">
               Join thousands of people who think better with Reflect
             </p>
           </ScrollAnimation>
 
           {/* Testimonials */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {[
               {
                 name: 'Sarah Chen',
@@ -216,24 +216,24 @@ export default function Home() {
                 delay={index * 100}
                 threshold={0.2}
               >
-                <div className="p-10 sm:p-12 lg:p-14 rounded-2xl bg-white border border-gray-100 card-hover hover:shadow-xl hover:shadow-glow-soft">
-                  <div className="mb-8">
+                <div className="p-8 sm:p-10 lg:p-12 rounded-xl bg-white border border-gray-100 card-hover hover:shadow-xl hover:shadow-glow-soft">
+                  <div className="mb-6">
                     {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-yellow-400 text-xl">★</span>
+                      <span key={i} className="text-yellow-400 text-lg">★</span>
                     ))}
                   </div>
-                  <p className="text-gray-700 text-lg leading-relaxed mb-10">
+                  <p className="text-gray-700 text-base leading-relaxed mb-8">
                     "{testimonial.content}"
                   </p>
-                  <div className="flex items-center gap-4">
-                    <div className={`w-14 h-14 rounded-full gradient-${testimonial.color} flex items-center justify-center text-white font-bold text-xl`}>
+                  <div className="flex items-center gap-3">
+                    <div className={`w-12 h-12 rounded-full gradient-${testimonial.color} flex items-center justify-center text-white font-bold text-lg`}>
                       {testimonial.name.charAt(0)}
                     </div>
                     <div>
-                      <div className="font-semibold text-gray-900 text-lg">
+                      <div className="font-semibold text-gray-900 text-base">
                         {testimonial.name}
                       </div>
-                      <div className="text-base text-gray-600">
+                      <div className="text-sm text-gray-600">
                         {testimonial.role}
                       </div>
                     </div>
@@ -246,21 +246,21 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="px-6 sm:px-8 lg:px-12 py-32 bg-white relative overflow-hidden">
+      <section className="px-6 sm:px-8 lg:px-12 py-24 bg-white relative overflow-hidden">
         {/* 背景装饰 */}
         <div className="absolute inset-0 bg-gradient-to-br from-violet-50 via-purple-50 to-violet-50/50" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-violet-200/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-200/10 rounded-full blur-3xl" />
 
-        <div className="max-w-5xl mx-auto text-center relative z-10">
+        <div className="max-w-4xl mx-auto text-center relative z-10">
           <ScrollAnimation>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               Ready to <span className="text-gradient">think better</span>?
             </h2>
-            <p className="text-xl text-gray-600 mb-12 leading-relaxed">
+            <p className="text-lg text-gray-600 mb-10 leading-relaxed">
               Start your free trial today. No credit card required.
             </p>
-            <div className="flex flex-col sm:flex-row gap-5 justify-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <button
                 className="
                   px-10 py-4 rounded-full
@@ -290,9 +290,9 @@ export default function Home() {
       <BlackHole />
 
       {/* Footer */}
-      <footer className="px-6 sm:px-8 lg:px-12 py-16 bg-gray-900 text-gray-400">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-12 mb-12">
+      <footer className="px-6 sm:px-8 lg:px-12 py-12 bg-gray-900 text-gray-400">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-10 mb-10">
             {/* Brand */}
             <div>
               <div className="flex items-center gap-2 mb-4">

@@ -32,7 +32,7 @@ export default function FeatureCard({ icon, title, description, delay = 0 }: Fea
   return (
     <div
       className={`
-        relative group p-10 sm:p-12 lg:p-14 rounded-2xl
+        relative group p-8 sm:p-10 lg:p-12 rounded-xl
         bg-white border border-gray-100
         card-hover
         cursor-pointer
@@ -66,11 +66,11 @@ export default function FeatureCard({ icon, title, description, delay = 0 }: Fea
         {/* 图标 */}
         <div
           className={`
-            w-16 h-16 rounded-2xl
+            w-14 h-14 rounded-xl
             flex items-center justify-center
             gradient-violet
             text-white
-            mb-10
+            mb-8
             transition-all duration-400
             ${isHovered ? 'scale-110 rotate-3 shadow-glow-violet' : ''}
           `}
@@ -81,7 +81,7 @@ export default function FeatureCard({ icon, title, description, delay = 0 }: Fea
         {/* 标题 */}
         <h3
           className={`
-            text-2xl font-bold text-gray-900 mb-5
+            text-xl font-bold text-gray-900 mb-4
             transition-all duration-300
             ${isHovered ? 'translate-x-2 text-gradient-purple' : ''}
           `}
@@ -92,7 +92,7 @@ export default function FeatureCard({ icon, title, description, delay = 0 }: Fea
         {/* 描述 */}
         <p
           className={`
-            text-gray-600 text-lg leading-relaxed
+            text-gray-600 text-base leading-relaxed
             transition-all duration-300
             ${isHovered ? 'text-gray-700' : ''}
           `}
@@ -133,7 +133,7 @@ export function AdvancedFeatureCard({
   return (
     <div
       className={`
-        relative group p-10 sm:p-12 lg:p-14 rounded-2xl
+        relative group p-8 sm:p-10 lg:p-12 rounded-xl
         bg-gradient-to-br from-white to-violet-50/30
         border border-gray-100
         card-hover
@@ -170,11 +170,11 @@ export function AdvancedFeatureCard({
         {/* 图标 */}
         <div
           className={`
-            w-16 h-16 rounded-2xl
+            w-14 h-14 rounded-xl
             flex items-center justify-center
             gradient-purple
             text-white
-            mb-10 shadow-lg
+            mb-8 shadow-lg
             transition-all duration-500
             ${isHovered ? 'scale-110 rotate-6 shadow-glow-purple' : ''}
           `}
@@ -185,7 +185,7 @@ export function AdvancedFeatureCard({
         {/* 标题 */}
         <h3
           className={`
-            text-2xl font-bold text-gray-900 mb-5
+            text-xl font-bold text-gray-900 mb-4
             transition-all duration-300
             ${isHovered ? 'text-gradient-purple' : ''}
           `}
@@ -194,7 +194,7 @@ export function AdvancedFeatureCard({
         </h3>
 
         {/* 描述 */}
-        <p className="text-gray-600 text-lg leading-relaxed mb-10">
+        <p className="text-gray-600 text-base leading-relaxed mb-8">
           {description}
         </p>
 

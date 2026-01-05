@@ -94,13 +94,13 @@ export default function HeroSection() {
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
 
       {/* Hero 内容 */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 text-center scale-95 md:scale-100">
         {/* Badge */}
         <div
           className={`
             inline-flex items-center gap-2 px-5 py-2.5 rounded-full
             bg-white/15 backdrop-blur-lg border border-white/20
-            text-white text-sm font-medium mb-12
+            text-white text-sm font-medium mb-10
             animate-slide-up
             ${shouldShow ? 'opacity-100' : 'opacity-0'}
           `}
@@ -115,8 +115,8 @@ export default function HeroSection() {
         {/* 主标题 */}
         <h1
           className={`
-            text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold
-            text-white mb-8 leading-[1.1]
+            text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold
+            text-white mb-6 leading-[1.15]
             animate-slide-up
             ${shouldShow ? 'opacity-100' : 'opacity-0'}
           `}
@@ -124,16 +124,16 @@ export default function HeroSection() {
             transitionDelay: shouldShow ? SCROLL_STAGGER_DELAY.STEP_2 : '0ms',
           }}
         >
-          <span className="block mb-2">Think faster.</span>
-          <span className="block mb-2">Think deeper.</span>
+          <span className="block mb-1.5">Think faster.</span>
+          <span className="block mb-1.5">Think deeper.</span>
           <span className="block">Think together.</span>
         </h1>
 
         {/* 打字机效果副标题 */}
         <div
           className={`
-            text-xl sm:text-2xl md:text-3xl
-            text-white/90 mb-10 min-h-[4rem]
+            text-lg sm:text-xl md:text-2xl
+            text-white/90 mb-8 min-h-[3.5rem]
             animate-slide-up
             ${shouldShow ? 'opacity-100' : 'opacity-0'}
           `}
@@ -150,7 +150,7 @@ export default function HeroSection() {
         {/* 描述文字 */}
         <p
           className={`
-            text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-14 leading-relaxed
+            text-base md:text-lg text-white/80 max-w-3xl mx-auto mb-12 leading-relaxed
             animate-slide-up
             ${shouldShow ? 'opacity-100' : 'opacity-0'}
           `}
@@ -166,7 +166,7 @@ export default function HeroSection() {
         {/* CTA 按钮 */}
         <div
           className={`
-            flex flex-col sm:flex-row gap-5 justify-center items-center
+            flex flex-col sm:flex-row gap-6 justify-center items-center
             animate-slide-up
             ${shouldShow ? 'opacity-100' : 'opacity-0'}
           `}
