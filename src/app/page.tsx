@@ -81,8 +81,8 @@ export default function Home() {
       <section className="pt-32 pb-40 bg-white bg-pattern-dots">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <ScrollAnimation className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+          <ScrollAnimation className="text-center mb-24">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
               Everything you need to
               <span className="text-gradient"> think better</span>
             </h2>
@@ -92,7 +92,7 @@ export default function Home() {
           </ScrollAnimation>
 
           {/* Features Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
             {features.map((feature, index) => (
               <ScrollAnimation
                 key={feature.title}
@@ -115,8 +115,8 @@ export default function Home() {
       <section className="py-32 md:py-40 bg-gradient-to-br from-violet-50/50 via-purple-50/50 to-pink-50/50 bg-pattern-grid">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <ScrollAnimation className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+          <ScrollAnimation className="text-center mb-24">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
               How it works
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -179,8 +179,8 @@ export default function Home() {
       <section className="pt-32 pb-40 bg-gradient-to-br from-violet-50/30 via-purple-50/30 to-pink-50/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <ScrollAnimation className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+          <ScrollAnimation className="text-center mb-24">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
               Loved by thinkers
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed">
@@ -189,7 +189,7 @@ export default function Home() {
           </ScrollAnimation>
 
           {/* Testimonials */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
             {[
               {
                 name: 'Sarah Chen',
@@ -215,13 +215,13 @@ export default function Home() {
                 delay={index * 100}
                 threshold={0.2}
               >
-                <div className="p-8 sm:p-10 lg:p-12 rounded-2xl bg-white border border-gray-100 card-hover hover:shadow-xl hover:shadow-glow-soft">
-                  <div className="mb-6">
+                <div className="p-10 sm:p-12 lg:p-14 rounded-2xl bg-white border border-gray-100 card-hover hover:shadow-xl hover:shadow-glow-soft">
+                  <div className="mb-8">
                     {[...Array(5)].map((_, i) => (
                       <span key={i} className="text-yellow-400 text-xl">★</span>
                     ))}
                   </div>
-                  <p className="text-gray-700 text-lg leading-relaxed mb-8">
+                  <p className="text-gray-700 text-lg leading-relaxed mb-10">
                     "{testimonial.content}"
                   </p>
                   <div className="flex items-center gap-4">
