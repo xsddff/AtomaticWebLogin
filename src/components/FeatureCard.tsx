@@ -32,7 +32,7 @@ export default function FeatureCard({ icon, title, description, delay = 0 }: Fea
   return (
     <div
       className={`
-        relative group p-10 rounded-2xl
+        relative group p-8 sm:p-10 lg:p-12 rounded-2xl
         bg-white border border-gray-100
         card-hover
         cursor-pointer
@@ -133,7 +133,7 @@ export function AdvancedFeatureCard({
   return (
     <div
       className={`
-        relative group p-10 rounded-2xl
+        relative group p-8 sm:p-10 lg:p-12 rounded-2xl
         bg-gradient-to-br from-white to-violet-50/30
         border border-gray-100
         card-hover

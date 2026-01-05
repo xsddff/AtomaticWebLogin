@@ -78,8 +78,8 @@ export default function Home() {
       <HeroSection />
 
       {/* Features Section */}
-      <section className="py-32 bg-white bg-pattern-dots">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="pt-32 pb-40 bg-white bg-pattern-dots">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <ScrollAnimation className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
@@ -112,8 +112,8 @@ export default function Home() {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-32 bg-gradient-to-br from-violet-50/50 via-purple-50/50 to-pink-50/50 bg-pattern-grid">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="py-32 md:py-40 bg-gradient-to-br from-violet-50/50 via-purple-50/50 to-pink-50/50 bg-pattern-grid">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <ScrollAnimation className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
@@ -176,8 +176,8 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-32 bg-gradient-to-br from-violet-50/30 via-purple-50/30 to-pink-50/30">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="pt-32 pb-40 bg-gradient-to-br from-violet-50/30 via-purple-50/30 to-pink-50/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <ScrollAnimation className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
@@ -215,7 +215,7 @@ export default function Home() {
                 delay={index * 100}
                 threshold={0.2}
               >
-                <div className="p-10 rounded-2xl bg-white border border-gray-100 card-hover hover:shadow-xl hover:shadow-glow-soft">
+                <div className="p-8 sm:p-10 lg:p-12 rounded-2xl bg-white border border-gray-100 card-hover hover:shadow-xl hover:shadow-glow-soft">
                   <div className="mb-6">
                     {[...Array(5)].map((_, i) => (
                       <span key={i} className="text-yellow-400 text-xl">★</span>
@@ -245,26 +245,25 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-gradient-to-br from-violet-600 via-purple-600 to-violet-700 relative overflow-hidden">
+      <section className="py-32 bg-white relative overflow-hidden">
         {/* 背景装饰 */}
-        <div className="absolute inset-0 bg-pattern-dots opacity-10" />
-        <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-br from-violet-50 via-purple-50 to-violet-50/50" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-violet-200/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-200/10 rounded-full blur-3xl" />
 
-        <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center relative z-10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <ScrollAnimation>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-              Ready to think better?
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
+              Ready to <span className="text-gradient">think better</span>?
             </h2>
-            <p className="text-xl text-violet-100 mb-12 leading-relaxed">
+            <p className="text-xl text-gray-600 mb-12 leading-relaxed">
               Start your free trial today. No credit card required.
             </p>
             <div className="flex flex-col sm:flex-row gap-5 justify-center">
               <button
                 className="
                   px-10 py-4 rounded-full
-                  bg-white text-violet-600 font-semibold text-lg
-                  hover:shadow-2xl hover:shadow-white/20
+                  btn-gradient-primary font-semibold text-lg
                   hover:scale-105
                   transition-all duration-300
                 "
@@ -274,9 +273,8 @@ export default function Home() {
               <button
                 className="
                   px-10 py-4 rounded-full
-                  bg-white/20 backdrop-blur-md border border-white/30
-                  text-white font-semibold text-lg
-                  hover:bg-white/30 hover:scale-105
+                  bg-gray-100 text-gray-700 font-semibold text-lg
+                  hover:bg-gray-200 hover:scale-105
                   transition-all duration-300
                 "
               >
