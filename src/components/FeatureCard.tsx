@@ -38,7 +38,7 @@ export default function FeatureCard({ icon, title, description, delay = 0 }: Fea
         cursor-pointer
         overflow-hidden
         transition-all duration-300
-        ${isHovered ? 'shadow-xl' : 'shadow-sm'}
+        ${isHovered ? 'shadow-xl shadow-glow-violet' : 'shadow-sm'}
       `}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -54,7 +54,7 @@ export default function FeatureCard({ icon, title, description, delay = 0 }: Fea
           style={{
             background: `radial-gradient(
               600px circle at ${mousePosition.x}px ${mousePosition.y}px,
-              rgba(139, 92, 246, 0.06),
+              rgba(139, 92, 246, 0.1),
               transparent 40%
             )`,
           }}
@@ -72,7 +72,7 @@ export default function FeatureCard({ icon, title, description, delay = 0 }: Fea
             text-white
             mb-6
             transition-all duration-300
-            ${isHovered ? 'scale-110 rotate-3' : 'scale-100'}
+            ${isHovered ? 'scale-110 rotate-3 shadow-glow-violet' : ''}
           `}
         >
           {icon}
@@ -83,7 +83,7 @@ export default function FeatureCard({ icon, title, description, delay = 0 }: Fea
           className={`
             text-xl font-bold text-gray-900 mb-3
             transition-all duration-300
-            ${isHovered ? 'translate-x-2' : ''}
+            ${isHovered ? 'translate-x-2 text-gradient-purple' : ''}
           `}
         >
           {title}
@@ -105,7 +105,7 @@ export default function FeatureCard({ icon, title, description, delay = 0 }: Fea
       <div
         className={`
           absolute bottom-0 left-0 h-0.5
-          bg-gradient-to-r from-violet-500 to-purple-500
+          bg-gradient-to-r from-violet-500 via-purple-500 to-pink-500
           transition-all duration-300 ease-out
           ${isHovered ? 'w-full' : 'w-0'}
         `}
@@ -134,11 +134,12 @@ export function AdvancedFeatureCard({
     <div
       className={`
         relative group p-8 rounded-2xl
-        bg-gradient-to-br from-white to-gray-50
+        bg-gradient-to-br from-white to-violet-50/30
         border border-gray-100
         card-hover
         cursor-pointer
         overflow-hidden
+        ${isHovered ? 'shadow-xl shadow-glow-purple' : 'shadow-sm'}
       `}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -149,8 +150,17 @@ export function AdvancedFeatureCard({
       {/* 背景装饰 */}
       <div
         className={`
-          absolute inset-0 bg-gradient-to-br from-violet-500/5 to-purple-500/5
+          absolute inset-0 bg-gradient-to-br from-violet-500/5 via-purple-500/5 to-pink-500/5
           transition-opacity duration-300
+          ${isHovered ? 'opacity-100' : 'opacity-0'}
+        `}
+      />
+
+      {/* 光标跟随效果 */}
+      <div
+        className={`
+          absolute inset-0 bg-gradient-to-br from-violet-500/10 to-purple-500/10
+          transition-opacity duration-300 pointer-events-none
           ${isHovered ? 'opacity-100' : 'opacity-0'}
         `}
       />
@@ -166,7 +176,7 @@ export function AdvancedFeatureCard({
             text-white
             mb-6 shadow-lg
             transition-all duration-500
-            ${isHovered ? 'scale-110 rotate-6' : ''}
+            ${isHovered ? 'scale-110 rotate-6 shadow-glow-purple' : ''}
           `}
         >
           {icon}
@@ -177,7 +187,7 @@ export function AdvancedFeatureCard({
           className={`
             text-2xl font-bold text-gray-900 mb-3
             transition-all duration-300
-            ${isHovered ? 'text-violet-600' : ''}
+            ${isHovered ? 'text-gradient-purple' : ''}
           `}
         >
           {title}
@@ -196,8 +206,9 @@ export function AdvancedFeatureCard({
                 key={tag}
                 className={`
                   px-3 py-1 rounded-full text-sm font-medium
-                  bg-violet-100 text-violet-700
+                  bg-gradient-to-r from-violet-100 to-purple-100 text-violet-700
                   transition-all duration-300
+                  ${isHovered ? 'scale-105' : ''}
                   ${isHovered ? 'opacity-100 translate-y-0' : 'opacity-80 translate-y-2'}
                 `}
                 style={{

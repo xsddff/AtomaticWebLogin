@@ -30,9 +30,13 @@ export default function HeroSection() {
     setMounted(true);
   }, []);
 
+  // 防止 hydration 不匹配
+  const isClient = typeof window !== 'undefined';
+  const shouldShow = isClient && mounted;
+
   // 打字机效果
   useEffect(() => {
-    if (!mounted) return;
+    if (!shouldShow) return;
 
     const currentText = texts[loopIndex];
 
@@ -73,11 +77,12 @@ export default function HeroSection() {
 
   return (
     <section
-      className="
+      className={`
         relative overflow-hidden
         min-h-screen flex items-center justify-center
         gradient-bg animate-gradient
-      "
+        ${!shouldShow ? 'opacity-0' : ''}
+      `}
     >
       {/* 背景粒子装饰 */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -93,10 +98,10 @@ export default function HeroSection() {
             bg-white/20 backdrop-blur-md border border-white/30
             text-white text-sm font-medium mb-8
             animate-slide-up
-            ${mounted ? 'opacity-100' : 'opacity-0'}
+            ${shouldShow ? 'opacity-100' : 'opacity-0'}
           `}
           style={{
-            transitionDelay: mounted ? SCROLL_STAGGER_DELAY.STEP_1 : '0ms',
+            transitionDelay: shouldShow ? SCROLL_STAGGER_DELAY.STEP_1 : '0ms',
           }}
         >
           <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
@@ -109,10 +114,10 @@ export default function HeroSection() {
             text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold
             text-white mb-6 leading-tight
             animate-slide-up
-            ${mounted ? 'opacity-100' : 'opacity-0'}
+            ${shouldShow ? 'opacity-100' : 'opacity-0'}
           `}
           style={{
-            transitionDelay: mounted ? SCROLL_STAGGER_DELAY.STEP_2 : '0ms',
+            transitionDelay: shouldShow ? SCROLL_STAGGER_DELAY.STEP_2 : '0ms',
           }}
         >
           <span className="block">Think faster.</span>
@@ -126,10 +131,10 @@ export default function HeroSection() {
             text-xl sm:text-2xl md:text-3xl
             text-white/90 mb-8 min-h-[3.5rem]
             animate-slide-up
-            ${mounted ? 'opacity-100' : 'opacity-0'}
+            ${shouldShow ? 'opacity-100' : 'opacity-0'}
           `}
           style={{
-            transitionDelay: mounted ? SCROLL_STAGGER_DELAY.STEP_3 : '0ms',
+            transitionDelay: shouldShow ? SCROLL_STAGGER_DELAY.STEP_3 : '0ms',
           }}
         >
           {typedText}
@@ -143,10 +148,10 @@ export default function HeroSection() {
           className={`
             text-lg text-white/70 max-w-2xl mx-auto mb-10
             animate-slide-up
-            ${mounted ? 'opacity-100' : 'opacity-0'}
+            ${shouldShow ? 'opacity-100' : 'opacity-0'}
           `}
           style={{
-            transitionDelay: mounted ? SCROLL_STAGGER_DELAY.STEP_4 : '0ms',
+            transitionDelay: shouldShow ? SCROLL_STAGGER_DELAY.STEP_4 : '0ms',
           }}
         >
           Reflect is the world's best AI-powered note-taking app.
@@ -159,17 +164,17 @@ export default function HeroSection() {
           className={`
             flex flex-col sm:flex-row gap-4 justify-center items-center
             animate-slide-up
-            ${mounted ? 'opacity-100' : 'opacity-0'}
+            ${shouldShow ? 'opacity-100' : 'opacity-0'}
           `}
           style={{
-            transitionDelay: mounted ? SCROLL_STAGGER_DELAY.STEP_5 : '0ms',
+            transitionDelay: shouldShow ? SCROLL_STAGGER_DELAY.STEP_5 : '0ms',
           }}
         >
           <button
             className="
               px-8 py-4 rounded-full
               bg-white text-gray-900 font-semibold text-lg
-              hover:shadow-2xl hover:shadow-white/20
+              hover:shadow-2xl hover:shadow-white/20 hover:shadow-glow-violet
               hover:scale-105
               transition-all duration-200
             "
@@ -194,10 +199,10 @@ export default function HeroSection() {
           className={`
             mt-16 relative
             animate-scale
-            ${mounted ? 'opacity-100' : 'opacity-0'}
+            ${shouldShow ? 'opacity-100' : 'opacity-0'}
           `}
           style={{
-            transitionDelay: mounted ? SCROLL_STAGGER_DELAY.STEP_6 : '0ms',
+            transitionDelay: shouldShow ? SCROLL_STAGGER_DELAY.STEP_6 : '0ms',
           }}
         >
           <div
@@ -205,7 +210,7 @@ export default function HeroSection() {
               relative max-w-4xl mx-auto
               bg-white/10 backdrop-blur-xl
               rounded-2xl border border-white/20
-              shadow-2xl
+              shadow-2xl shadow-glow-purple
             "
           >
             {/* 顶部栏 */}

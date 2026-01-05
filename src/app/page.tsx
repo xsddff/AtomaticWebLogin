@@ -73,12 +73,12 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-gradient-to-br from-gray-50 via-violet-50/20 to-purple-50/20">
       <Navbar />
       <HeroSection />
 
       {/* Features Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white bg-pattern-dots">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section Header */}
           <ScrollAnimation className="text-center mb-16">
@@ -112,7 +112,7 @@ export default function Home() {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-24 bg-gradient-to-br from-violet-50 to-purple-50">
+      <section className="py-24 bg-gradient-to-br from-violet-50/50 via-purple-50/50 to-pink-50/50 bg-pattern-grid">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section Header */}
           <ScrollAnimation className="text-center mb-16">
@@ -148,15 +148,15 @@ export default function Home() {
                 delay={index * 150}
                 threshold={0.2}
               >
-                <div className="relative">
+                <div className="relative group">
                   {/* Step Number */}
-                  <div className="text-8xl font-bold text-violet-200 absolute -top-12 -left-4">
+                  <div className="text-8xl font-bold text-gradient-purple absolute -top-12 -left-4 opacity-50 group-hover:opacity-70 transition-opacity">
                     {item.step}
                   </div>
 
                   {/* Content */}
                   <div className="relative pt-12">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-gradient-purple transition-colors">
                       {item.title}
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
@@ -166,7 +166,7 @@ export default function Home() {
 
                   {/* Connector Line */}
                   {index < 2 && (
-                    <div className="hidden md:block absolute top-20 -right-6 w-12 h-0.5 bg-gradient-to-r from-violet-300 to-transparent" />
+                    <div className="hidden md:block absolute top-20 -right-6 w-12 h-0.5 bg-gradient-to-r from-violet-400 to-transparent group-hover:w-16 transition-all duration-300" />
                   )}
                 </div>
               </ScrollAnimation>
@@ -176,7 +176,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-gradient-to-br from-violet-50/30 via-purple-50/30 to-pink-50/30">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section Header */}
           <ScrollAnimation className="text-center mb-16">
@@ -195,16 +195,19 @@ export default function Home() {
                 name: 'Sarah Chen',
                 role: 'Product Designer',
                 content: 'Reflect has completely transformed how I think and work. The AI features are game-changing.',
+                color: 'violet'
               },
               {
                 name: 'Michael Park',
                 role: 'Founder',
                 content: 'Finally, a note-taking app that keeps up with my thoughts. The linking system is brilliant.',
+                color: 'purple'
               },
               {
                 name: 'Emily Watson',
                 role: 'Researcher',
                 content: 'The AI summaries help me process information faster than ever. Highly recommended!',
+                color: 'pink'
               },
             ].map((testimonial, index) => (
               <ScrollAnimation
@@ -212,7 +215,7 @@ export default function Home() {
                 delay={index * 100}
                 threshold={0.2}
               >
-                <div className="p-8 rounded-2xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
+                <div className={`p-8 rounded-2xl bg-white border border-gray-100 card-hover hover:shadow-xl hover:shadow-${testimonial.color}-500/20`}>
                   <div className="mb-4">
                     {[...Array(5)].map((_, i) => (
                       <span key={i} className="text-yellow-400">★</span>
@@ -221,12 +224,17 @@ export default function Home() {
                   <p className="text-gray-700 leading-relaxed mb-6">
                     "{testimonial.content}"
                   </p>
-                  <div>
-                    <div className="font-semibold text-gray-900">
-                      {testimonial.name}
+                  <div className="flex items-center gap-3">
+                    <div className={`w-12 h-12 rounded-full gradient-${testimonial.color} flex items-center justify-center text-white font-bold text-lg`}>
+                      {testimonial.name.charAt(0)}
                     </div>
-                    <div className="text-sm text-gray-600">
-                      {testimonial.role}
+                    <div>
+                      <div className="font-semibold text-gray-900">
+                        {testimonial.name}
+                      </div>
+                      <div className="text-sm text-gray-600">
+                        {testimonial.role}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -237,8 +245,13 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-br from-violet-600 via-purple-600 to-pink-600">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+      <section className="py-24 bg-gradient-to-br from-violet-600 via-purple-600 to-pink-600 relative overflow-hidden">
+        {/* 背景装饰 */}
+        <div className="absolute inset-0 bg-pattern-dots opacity-10" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl" />
+
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10">
           <ScrollAnimation>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to think better?
