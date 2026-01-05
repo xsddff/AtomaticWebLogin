@@ -2,7 +2,9 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0a0a0a;
+  --primary: #8b5cf6;
+  --primary-hover: #7c3aed;
 }
 
 @theme inline {
@@ -19,8 +21,308 @@
   }
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========================================
+   Reflect.app 复刻 - 动画关键帧
+   ======================================== */
+
+/* 渐入动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 上滑淡入 */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 下滑淡入 */
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 左滑淡入 */
+@keyframes slideLeftFade {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 右滑淡入 */
+@keyframes slideRightFade {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 缩放淡入 */
+@keyframes scaleFade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 背景渐变动画 */
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* 浮动动画 */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* 脉冲动画 */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* 打字机光标闪烁 */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* 旋转动画 */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 弹性弹入 */
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ========================================
+   实用动画类
+   ======================================== */
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUpFade 0.6s ease-out forwards;
+}
+
+.animate-slide-down {
+  animation: slideDownFade 0.6s ease-out forwards;
+}
+
+.animate-scale {
+  animation: scaleFade 0.4s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+/* 滚动动画初始状态 */
+.scroll-hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 打字机光标 */
+.typewriter-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background: currentColor;
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+}
+
+/* ========================================
+   自定义工具类
+   ======================================== */
+
+/* 渐变背景 */
+.gradient-bg {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+}
+
+.gradient-violet {
+  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+}
+
+.gradient-purple {
+  background: linear-gradient(135deg, #a855f7 0%, #8b5cf6 100%);
+}
+
+/* 玻璃态效果 */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 平滑滚动 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 文字渐变 */
+.text-gradient {
+  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 卡片悬停效果 */
+.card-hover {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+}
+
+/* 加载动画 */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 25%,
+    #e0e0e0 50%,
+    #f0f0f0 75%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+@media (prefers-color-scheme: dark) {
+  .skeleton {
+    background: linear-gradient(
+      90deg,
+      #1a1a1a 25%,
+      #2a2a2a 50%,
+      #1a1a1a 75%
+    );
+  }
+}
+
+/* 性能优化：减少重绘 */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
+/* 响应式字体大小 */
+@media (max-width: 768px) {
+  .responsive-text {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+  }
 }

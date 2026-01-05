@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AIBox - 智能AI助手平台",
-  description: "AIBox，让AI触手可及，为您的工作和生活带来无限可能",
+  title: "Reflect - Think Better Together",
+  description: "The world's best AI-powered note-taking app. Capture ideas at the speed of thought with automatic linking and AI summaries.",
+  keywords: ["notes", "AI", "productivity", "knowledge management"],
 };
 
 export default function RootLayout({
@@ -24,14 +24,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN">
+    <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-gray-50 to-white min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
-        <main className="pt-16">
-          {children}
-        </main>
+        {children}
       </body>
     </html>
   );
