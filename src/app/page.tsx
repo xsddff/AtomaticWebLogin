@@ -2,6 +2,7 @@ import HeroSection from '@/components/HeroSection';
 import Navbar from '@/components/Navbar';
 import ScrollAnimation from '@/components/ScrollAnimation';
 import FeatureCard, { AdvancedFeatureCard } from '@/components/FeatureCard';
+import BlackHole from '@/components/BlackHole';
 import Link from 'next/link';
 
 /**
@@ -284,6 +285,9 @@ export default function Home() {
           </ScrollAnimation>
         </div>
       </section>
+
+      {/* Black Hole Animation */}
+      <BlackHole />
 
       {/* Footer */}
       <footer className="px-6 sm:px-8 lg:px-12 py-16 bg-gray-900 text-gray-400">
